@@ -163,17 +163,27 @@
 		}
 	},
 	"scripts": {
-		"vscode:prepublish": "tsc -p ./ --sourceMap false",
 		"compile": "tsc -p ./",
+		"test:watch": "jest --watch --testPathPattern=unit",
+		"test": "jest --coverage --testPathPattern=unit",
+		"vscode:test": "vscode-test",
+		"vscode:prepublish": "tsc -p ./ --sourceMap false",
 		"watch": "tsc -watch -p ./",
-		"test": "jest"
 	},
 	"devDependencies": {
+		"@types/glob": "^8.1.0",
 		"@types/jest": "^29.1.2",
+		"@types/mocha": "^10.0.10",
 		"@types/node": "^18.7.15",
 		"@types/vscode": "^1.71.0",
+		"@vscode/test-cli": "^0.0.12",
+		"@vscode/test-electron": "^2.5.2",
 		"jest": "^29.1.2",
+		"mocha": "^11.7.5",
 		"ts-jest": "^29.0.3",
+		"ts-node": "^10.9.2",
+		"tsconfig-paths": "^4.2.0",
+		"tsx": "^4.21.0",
 		"typescript": "^4.8.2"
 	}
 }
