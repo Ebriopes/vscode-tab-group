@@ -9,10 +9,21 @@
 		"rootDir": "src",
 		"strict": true,
 		"experimentalDecorators": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"paths": {
+			"@src/*": ["./src/*"],
+			"@test/*": ["./src/test/*"],
+			"@root/*": ["./*"]
+		}
 	},
 	"exclude": [
 		"node_modules",
-		".vscode-test"
+		".vscode-test.js"
+	],
+	"include": [
+		"src/**/*"
 	]
 }
